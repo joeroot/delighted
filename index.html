@@ -18,8 +18,15 @@
   <script src="js/vendor/parsley.min.js"></script>
   <script src="js/vendor/custom.modernizr.js"></script>
 
+  <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+    typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+  b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+  mixpanel.init("55861765fa6ac6c26bd23174842c67f0");</script><!-- end Mixpanel -->
 </head>
 <body>
+  <script type="text/javascript">
+    mixpanel.track("view:home");
+  </script>
 
   <div class="container">
     <div class="row">
@@ -100,18 +107,19 @@
 
                     user.save(null, {
                       success: function(user) {
-                        // Execute any logic that should take place after the object is saved.
+                        mixpanel.track("event:signup");
                         $(".details").slideUp(300, function(){
                           $(".details").html("<h2><b>Thanks for signing up!</b> We'll be in contact with your first read shortly!</h2>");
                           $(".details").slideDown(300);
                         });
                       },
                       error: function(user, error) {
-                        // Execute any logic that should take place if the save fails.
-                        // error is a Parse.Error with an error code and description.
+                        mixpanel.track("error:signup");
                         alert('Failed to create new object, with error code: ' + error.description);
                       }
                     });
+                  } else {
+                    mixpanel.track("error:validation");
                   }
                   e.preventDefault();
                 });
@@ -137,6 +145,7 @@
               $(".introduce").slideUp(500, function(){
                 $(".about").slideDown(500);
               })
+              mixpanel.track("view:about");
               e.preventDefault();
             });
 
