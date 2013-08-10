@@ -86,6 +86,14 @@ input[type="text"]:focus {
   border-bottom:2px solid #000;
 }
 
+input[type="text"].parsley-error {
+  border-color:#C12F5F;
+}
+
+ul.parsley-error-list, li.parsley-error {
+  display:none;
+}
+
 form {
   margin:0;
 }
