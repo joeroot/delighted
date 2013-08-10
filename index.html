@@ -55,7 +55,7 @@
                   <label class="inline">Twitter</label>
                 </div>
                 <div class="column large-6">
-                  <input id="twitter" type="text" value="" placeholder="We'd like to see you follow" />
+                  <input id="twitter" type="text" value="" placeholder="Your twitter handle" />
                 </div>
                 <div class="column large-4">
                   <label class="inline more"><a id="show-more-detail"  tabindex = "-1" href="#">Tell us more? <span style="color:#888">(optional)</span></a></label>
@@ -168,10 +168,10 @@
     var onMediaMatch = function() {
       if (window.matchMedia("only screen and (min-width: 48em)").matches) {
         $("#email").attr("placeholder", "We'll only email once, unless you'd like more");
-        $("#twitter").attr("placeholder", "We'd like to see you follow");
+        $("#twitter").attr("placeholder", "Your Twitter handle");
       } else {
         $("#email").attr("placeholder", "Email");
-        $("#twitter").attr("placeholder", "Twitter");
+        $("#twitter").attr("placeholder", "Twitter handle");
       }
     };
 
