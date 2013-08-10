@@ -1,0 +1,157 @@
+*, body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+html,body {
+  height:100%;
+}
+
+div.container {
+  padding-top:16px;
+  padding-bottom:16px;
+  min-height:100%;
+  width:100%;
+  color:#FFF;
+  background-color:#000;
+  background-image: url(/img/sky.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+div.introduce, div.about {
+  position:relative;
+}
+
+div.header {
+  background:#222;
+  padding:24px;
+  color:#FFF;
+}
+
+div.details {
+  background:#FFF;
+  padding:24px;
+  color:#333;
+}
+
+div.about {
+  display:none;
+}
+
+label.inline {
+  display:none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
+  font-size:13px;
+  text-align:right;
+  text-transform:uppercase;
+  padding-top:11px;
+}
+
+label.more {
+  display:block;
+  font-family: 'Merriweather', serif;
+  font-style:italic;
+  font-weight:400;
+  text-align:left;
+  font-size:14px;
+  text-transform:none;
+  padding-top:14px;
+}
+
+a {
+  color:#133051;
+}
+
+input[type="text"],
+input[type="text"]:focus {
+  font-family: 'Merriweather', serif;
+  font-size:16px;
+  font-weight:400;
+  background:none;
+  border:none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  box-shadow:none;
+  border-bottom:2px solid #555;
+  margin-bottom:24px;
+}
+
+input[type="text"]:focus {
+  border-bottom:2px solid #000;
+}
+
+form {
+  margin:0;
+}
+
+.button {
+  border:none;
+  box-shadow:none;
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#333;
+  font-size:15px;
+  margin-top:12px;
+  margin-bottom:0;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight:700;
+  font-size:24px;
+  text-transform:uppercase;
+  color:#FFF;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  color:#FFF;
+  font-size:16px;
+  line-height:24px;
+  font-weight:400;
+}
+
+.details h2 {
+  color:#333;
+}
+
+a.small-button{
+  display:block;
+  width:16px;
+  height:16px;
+  text-indent:16px;
+  overflow:hidden;
+  background:url(/img/info.png) no-repeat 0 0;
+  position:absolute;
+  top:10px;
+  right:10px;
+  opacity:0.8;
+}
+
+a#show-home {
+  background:url(/img/back.png) no-repeat 0 0;
+}
+
+a.small-button:hover {
+  opacity:1;
+}
+
+
+@media only screen and (min-width: 768px) {
+div.container {
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+label.inline {
+  display:block;
+}
+}
+
