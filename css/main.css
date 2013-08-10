@@ -61,7 +61,15 @@ label.more {
   text-align:left;
   font-size:14px;
   text-transform:none;
-  padding-top:14px;
+  padding-top:11px;
+}
+
+label.terms {
+  font-family: 'Merriweather', serif;
+  padding-top:26px;
+  text-transform:none;
+  font-style:italic;
+  color:#888;
 }
 
 a {
