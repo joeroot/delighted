@@ -14,7 +14,7 @@ div.container {
   width:100%;
   color:#FFF;
   background-color:#000;
-  background-image: url(/img/sky.jpg);
+  background-image: url(../img/sky.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -128,7 +128,7 @@ a.small-button{
   height:16px;
   text-indent:16px;
   overflow:hidden;
-  background:url(/img/info.png) no-repeat 0 0;
+  background:url(../img/info.png) no-repeat 0 0;
   position:absolute;
   top:10px;
   right:10px;
@@ -136,7 +136,7 @@ a.small-button{
 }
 
 a#show-home {
-  background:url(/img/back.png) no-repeat 0 0;
+  background:url(../img/back.png) no-repeat 0 0;
 }
 
 a.small-button:hover {
